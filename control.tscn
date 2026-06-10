@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://disd76ga2w2vl"]
+
+[ext_resource type="Script" uid="uid://ca7brk25f0bpy" path="res://control.gd" id="1_0fbet"]
+
+[node name="Control" type="Control" unique_id=58489013]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fbet")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=952342832]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 231.0
+offset_right = 859.0
+offset_bottom = 491.0
+
+[node name="Titulo" type="Label" parent="VBoxContainer" unique_id=1377882673]
+layout_mode = 2
+text = "Adivinhe o Número"
+horizontal_alignment = 1
+
+[node name="Subtitulo" type="Label" parent="VBoxContainer" unique_id=683476552]
+layout_mode = 2
+text = "Pense em um número de 0 a 1000"
+horizontal_alignment = 1
+
+[node name="Mensagem" type="Label" parent="VBoxContainer" unique_id=1443971526]
+layout_mode = 2
+text = "Dummy Text"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=230688642]
+layout_mode = 2
+text = "Maior"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1105330966]
+layout_mode = 2
+text = "Menor"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=833566955]
+layout_mode = 2
+text = "Correto"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
